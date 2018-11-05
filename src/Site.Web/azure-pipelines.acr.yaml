@@ -4,6 +4,6 @@ steps:
 - task: AzureCLI@1
   displayName: 'Azure CLI'
   inputs:
-    azureSubscription: 'Azure-Subscription'
+    azureSubscription: 'Azure-Connection-Endpoint'
     scriptLocation: inlineScript
     inlineScript: 'az acr build --registry $(acr_name) --image $(image_name):$(Build.BuildId) .'
