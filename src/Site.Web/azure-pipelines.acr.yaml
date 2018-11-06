@@ -1,5 +1,9 @@
-pool:
-  vmImage: 'Ubuntu 16.04'
+resources:
+- repo: self
+
+queue:
+  name: Hosted Ubuntu 1604
+
 steps:
 - task: AzureCLI@1
   displayName: 'Azure CLI'
