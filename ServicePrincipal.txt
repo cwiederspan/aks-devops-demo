@@ -1,0 +1,29 @@
+
+az ad sp create-for-rbac --name cdw-aks-20180915SP-20180915000000
+
+{
+  "appId": "2aedc3eb-05ef-4dc9-a452-f510057452a4",
+  "displayName": "cdw-aks-20180915SP-20180915000000",
+  "name": "http://cdw-aks-20180915SP-20180915000000",
+  "password": "4e6e3cc9-0974-46f0-9d1e-550aeadc1bad",
+  "tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+}
+
+
+
+var.acr_name : mhugacr20180918
+
+var.acr_password : rVDcoxcL/JujVsGruEZ5srbfLuC4t152
+
+var.app_service_name : mhug-ms01-20180918
+
+var.image_name : microservice-api-docker-01
+
+var.image_tag : 166
+
+var.resource_group_name : mhug-devops-20180918
+
+terraform apply -auto-approve -var acr_name=$(acr_name) -var acr_password=$(acr_password) -var resource_group_name=$(resource_group_name) -var app_service_name=$(app_service_name) -var image_name=$(image_name) -var image_tag=$(BUILD.BUILDID)
+
+terraform apply -auto-approve -var acr_name=mhugacr20180918 -var acr_password=rVDcoxcL/JujVsGruEZ5srbfLuC4t152 -var resource_group_name=mhug-devops-20180918 -var app_service_name=mhug-ms01-20180918 -var image_name=microservice-api-docker-01 -var image_tag=167
+
